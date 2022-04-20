@@ -1,4 +1,4 @@
-module github.com/sibedge-llc/dp-services
+module github.com/sibedge-llc/dp-services/eventer
 
 go 1.17
 
