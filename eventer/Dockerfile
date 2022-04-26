@@ -1,5 +1,5 @@
 # build image
-FROM golang:1.17-alpine as builder
+FROM golang:1.18-alpine as builder
 RUN apk add --update --no-cache git make gcc musl-dev
 
 WORKDIR /app

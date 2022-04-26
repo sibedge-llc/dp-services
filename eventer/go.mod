@@ -1,6 +1,6 @@
 module github.com/sibedge-llc/dp-services/eventer
 
-go 1.17
+go 1.18
 
 require (
 	github.com/EDDYCJY/fake-useragent v0.2.0

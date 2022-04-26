@@ -30,6 +30,7 @@ func New(cfg *config.ServiceConfig, kafkaService *kafka.Service, postgresService
 
 func (s *service) ListenAndServe() error {
 	mux := mux.NewRouter()
+	mux.HandleFunc("/", s.handleHealthCheck).Methods(http.MethodGet)
 	mux.HandleFunc("/generator/add", s.handleGeneratorAdd).Methods(http.MethodPost)
 	mux.HandleFunc("/generator/remove", s.handleGeneratorRemove).Methods(http.MethodPost)
 	mux.HandleFunc("/generator/status", s.handleGeneratorStatus).Methods(http.MethodGet)

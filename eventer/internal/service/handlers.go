@@ -21,6 +21,12 @@ type AddGeneratorResponse struct {
 	Generators []GeneratorStatus `json:"generators"`
 }
 
+func (s *service) handleHealthCheck(w http.ResponseWriter, r *http.Request) {
+	WriteObject(w, map[string]interface{}{
+		"result": http.StatusText(http.StatusOK),
+	})
+}
+
 func (s *service) handleGeneratorAdd(w http.ResponseWriter, r *http.Request) {
 	var request event.GeneratorDesc
 	err := ParseRequest(r, &request)
