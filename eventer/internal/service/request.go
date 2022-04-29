@@ -179,7 +179,8 @@ func ParseRequest(r *http.Request, out interface{}) error {
 	var requestDataParser RequestDataParser
 	switch r.Method {
 	case http.MethodPost, http.MethodPut:
-		mimeType, _, err := mime.ParseMediaType(r.Header.Get("content-type"))
+		var mimeType string
+		mimeType, _, err = mime.ParseMediaType(r.Header.Get("content-type"))
 		if err != nil {
 			return err
 		}
