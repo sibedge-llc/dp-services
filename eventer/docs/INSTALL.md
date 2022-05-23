@@ -18,7 +18,7 @@ See [USAGE](./USAGE.md) for help using the eventer service
 To have it run in K8s it has to be followed by certain steps
 
 1. Clone helm charts repository [github.com/sibedge-llc/dp-charts](https://github.com/sibedge-llc/dp-charts)
-   See [github.com/sibedge-llc/dp-charts/README.md](https://github.com/sibedge-llc/dp-charts/README.md) for the next steps
+   See [dp-charts/README.md](https://github.com/sibedge-llc/dp-charts/tree/eventer/README.md) for the next steps
 ```shell
 git clone git@github.com:sibedge-llc/dp-charts.git & cd dp-charts/eventer
 ```
